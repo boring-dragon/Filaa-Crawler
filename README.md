@@ -1,6 +1,7 @@
 # Filaa-Crawler
 
 [![StyleCI](https://github.styleci.io/repos/316650764/shield?branch=master)](https://github.styleci.io/repos/316650764?branch=master)
+[![Build Status](https://travis-ci.org/boring-dragon/Filaa-Crawler.svg?branch=master)](https://travis-ci.org/boring-dragon/Filaa-Crawler)
 
 Scrapes https://filaa.moe.gov.mv/
 
