@@ -19,7 +19,7 @@ $crawler
   ->setSchool(222) //School id
   ->setGrade(8) // Grade 8
   ->setSubject(12) // subject id (Business Studies)
-  ->setType(3) // Video
+  ->setType("videos") // videos,notes,worksheets
   ->extract();
 ```
 

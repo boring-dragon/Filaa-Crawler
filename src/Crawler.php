@@ -2,6 +2,7 @@
 
 namespace Jinas\Filaa;
 
+use Exception;
 use Goutte\Client;
 use Symfony\Component\HttpClient\HttpClient;
 
@@ -17,6 +18,11 @@ class Crawler
     protected $items;
 
     protected const URL = "https://filaa.moe.gov.mv";
+    protected const TYPES = [
+       "notes" => 1,
+       "worksheets" => 2,
+       "videos" => 3
+    ];
 
     public function __construct()
     {
@@ -79,7 +85,12 @@ class Crawler
      */
     public function setType(string $type): Crawler
     {
-        $this->type = $type;
+        if(!array_key_exists($type, $this::TYPES))
+        {
+            throw new Exception("Invalid Type");
+        }
+
+        $this->type = $this::TYPES[$type];
         return $this;
     }
     
